@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HeartForecast</string>
+    <string name="Desc_home">Aplikasi ini dirancang untuk memprediksi secara diagnostik apakah seorang pasien menderita penyakit jantung atau tidak berdasarkan pengukuran diagnostik tertentu. Kumpulan data yang digunakan bersumber dari Kaggle, khususnya dataset Heart Disease Classification. Aplikasi ini menggunakan algoritma machine learning untuk menganalisis data dan memberikan prediksi yang akurat tentang kemungkinan seseorang menderita penyakit jantung. Berikut adalah langkah-langkah\npenggunaan aplikasi ini:</string>
+    <string name="cara">1. Input Nilai : Masukkan nilai-nilai pada form input untuk pasien yang ingin di prediksi\n2. Proses Prediksi : Setelah semua nilai input dimasukkan, aplikasi akan menggunakan model yang telah dilatih untuk memproses data tersebut.\n3. Hasil Prediksi : Aplikasi akan memberikan output berupa prediksi apakah pasien menderita Heartdisease atau tidak.</string>
+    <string name="Deskripsi">Heart Disease Prediction ini adalah aplikasi yang\n        dibuat untuk memprediksi seseorang menderita penyakit jantung atau tidak</string>
+</resources>

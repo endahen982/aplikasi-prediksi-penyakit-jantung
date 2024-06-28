@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimulasiActivity">
+
+    <!-- Title of the page -->
+    <TextView
+        android:id="@+id/tv_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Simulasi"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Separation Line -->
+    <View
+        android:id="@+id/separation_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_page_title" />
+
+    <!-- Adding margin to the ScrollView to create space between the separation line and the content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/separation_line"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Age (29 ~ 77)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <EditText
+                android:id="@+id/editSex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Sex (0 - Female, 1 - Male)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editAge"
+                app:layout_constraintStart_toStartOf="@id/editAge"
+                app:layout_constraintTop_toBottomOf="@id/editAge" />
+
+            <EditText
+                android:id="@+id/editChestPainType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Chest Pain Type (0 ~ 3)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editSex"
+                app:layout_constraintStart_toStartOf="@id/editSex"
+                app:layout_constraintTop_toBottomOf="@id/editSex" />
+
+            <EditText
+                android:id="@+id/editRestingBP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Resting BP (94 ~ 200)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editChestPainType"
+                app:layout_constraintStart_toStartOf="@id/editChestPainType"
+                app:layout_constraintTop_toBottomOf="@id/editChestPainType" />
+
+            <EditText
+                android:id="@+id/editCholesterol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Cholesterol (126 ~ 564)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editRestingBP"
+                app:layout_constraintStart_toStartOf="@id/editRestingBP"
+                app:layout_constraintTop_toBottomOf="@id/editRestingBP" />
+
+            <EditText
+                android:id="@+id/editFastingBloodSugar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Fasting Blood Sugar > 120 mg/dl (1=True; 0=False)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editCholesterol"
+                app:layout_constraintStart_toStartOf="@id/editCholesterol"
+                app:layout_constraintTop_toBottomOf="@id/editCholesterol" />
+
+            <EditText
+                android:id="@+id/editRestecg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Resting ECG Results (0 ~ 2)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editFastingBloodSugar"
+                app:layout_constraintStart_toStartOf="@id/editFastingBloodSugar"
+                app:layout_constraintTop_toBottomOf="@id/editFastingBloodSugar" />
+
+            <EditText
+                android:id="@+id/editMaxHR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Input Max HR (71 ~ 202)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editRestecg"
+                app:layout_constraintStart_toStartOf="@id/editRestecg"
+                app:layout_constraintTop_toBottomOf="@id/editRestecg" />
+
+            <EditText
+                android:id="@+id/editExang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Exercise Induced Angina (1=Yes; 0=No)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editMaxHR"
+                app:layout_constraintStart_toStartOf="@id/editMaxHR"
+                app:layout_constraintTop_toBottomOf="@id/editMaxHR" />
+
+            <EditText
+                android:id="@+id/editOldpeak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="ST Depression Induced by Exercise (0 ~ 6.2)"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editExang"
+                app:layout_constraintStart_toStartOf="@id/editExang"
+                app:layout_constraintTop_toBottomOf="@id/editExang" />
+
+            <EditText
+                android:id="@+id/editSlope"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Slope of Peak Exercise ST Segment (1 ~ 3)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editOldpeak"
+                app:layout_constraintStart_toStartOf="@id/editOldpeak"
+                app:layout_constraintTop_toBottomOf="@id/editOldpeak" />
+
+            <EditText
+                android:id="@+id/editNumMajorVessels"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Number of Major Vessels (0 ~ 3)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editSlope"
+                app:layout_constraintStart_toStartOf="@id/editSlope"
+                app:layout_constraintTop_toBottomOf="@id/editSlope" />
+
+            <EditText
+                android:id="@+id/editThal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Thal (3=Normal; 6=Fixed Defect; 7=Reversible Defect)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/editNumMajorVessels"
+                app:layout_constraintStart_toStartOf="@id/editNumMajorVessels"
+                app:layout_constraintTop_toBottomOf="@id/editNumMajorVessels" />
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="PREDICT"
+                app:layout_constraintEnd_toEndOf="@+id/editThal"
+                app:layout_constraintStart_toStartOf="@+id/editThal"
+                app:layout_constraintTop_toBottomOf="@+id/editThal" />
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btnCheck"
+                app:layout_constraintStart_toStartOf="@+id/btnCheck"
+                app:layout_constraintTop_toBottomOf="@+id/btnCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
